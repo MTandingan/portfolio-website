@@ -51,7 +51,7 @@ main {
 }
 
 section {
-    margin: 50px 0;
+    margin: 100px 0;
     padding: 20px 0;
 }
 
@@ -236,6 +236,59 @@ button:hover {
     padding: 15px 20px;
     text-align: center;
     font-size: 0.9rem;
+}
+
+footer {
+    background-color: #3f3e3e;
+    padding: 40px 20px;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.footer-logo {
+    flex: 1;
+}
+
+.footer-links,
+.footer-subscribe,
+.footer-socials {
+    flex: 1;
+    margin: 10px;
+}
+
+.footer-links ul,
+.footer-socials ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-links a:hover,
+.footer-socials a:hover {
+    text-decoration: underline;
+}
+
+.footer-subscribe {
+    display: flex;
+}
+
+.footer-subscribe input[type="email"] {
+    padding: 10px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+}
+
+.footer-subscribe button {
+    padding: 10px;
+    border-radius: 0 5px 5px 0;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 80px;
 }
 
 @media (max-width: 768px){
