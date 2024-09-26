@@ -7,15 +7,9 @@
     background-color: #24252a;
 }
 
-h1, h2 {
+h1, h2, h3, h4, h5, p {
     font-family: "Montserrat", sans-serif;
     color: #edf0f1;
-}
-
-#title {
-    font-weight: bold;
-    color: #edf0f1;
-    cursor: pointer;
 }
 
 li, a, button {
@@ -28,9 +22,54 @@ li, a, button {
 
 header {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
     margin: 30px 10%;
+}
+
+main {
+    margin: 30px 10%;
+}
+
+#title {
+    font-weight: bold;
+    color: #edf0f1;
+    cursor: pointer;
+    margin-right: auto;
+}
+
+.margin-top-100px {
+    margin-top: 100px;
+}
+
+.margin-top-50px {
+    margin-top: 50px;
+}
+
+.line-height-main {
+    line-height: 25px;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.big-title {
+    font-size: 50px;
+}
+
+.section-about-me {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.section-about-me-description {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 8% 15px;
 }
 
 .nav-links {
@@ -49,6 +88,32 @@ header {
 .nav-links li a:hover {
     color: #0088a9;
 }
+
+.section-skillsets-elements {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+}
+
+.skillset-box {
+    border: 3px solid #edf0f1;
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    gap: 10px;
+}
+
+.skillset-box ul {
+    margin-right: 100px;
+    padding-left: 20px;
+}
+
+.skillset-box ul li {
+    margin-top: 10px;
+}
+
 
 button {
     padding: 9px 25px;
