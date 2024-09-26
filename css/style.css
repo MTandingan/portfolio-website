@@ -50,6 +50,11 @@ main {
     margin: 30px 10%;
 }
 
+section {
+    margin: 50px 0;
+    padding: 20px 0;
+}
+
 button {
     padding: 9px 25px;
     background-color: rgba(0,136,169,1);
@@ -131,6 +136,29 @@ button:hover {
     gap: 50px;
 }
 
+.section-contact-me-button {
+    margin: 10%;
+}
+
+.section-contact-me-button-elements {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+}
+
+.section-contact-me-button-elements .big-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+.section-contact-me-button-elements p {
+    font-size: 1.125rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
 .skillset-box {
     border: 3px solid #edf0f1;
     border-radius: 20px;
@@ -208,4 +236,18 @@ button:hover {
     padding: 15px 20px;
     text-align: center;
     font-size: 0.9rem;
+}
+
+@media (max-width: 768px){
+    .section-contact-me-button-elements {
+        padding: 3rem 1rem;
+    }
+
+    .section-contact-me-button-elements .big-title {
+        font-size: 2rem;
+    }
+
+    .section-contact-me-button-elements p {
+        font-size: 1rem;
+    }
 }
