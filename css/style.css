@@ -106,6 +106,26 @@ button:hover {
     grid-template-columns: repeat(2, 1fr);
 }
 
+.section-about-me-skills {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+}
+
+.section-about-me-more {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+}
+
+.section-about-me-more .about-me-more-1 {
+    order: 2;
+}
+
+.section-about-me-more .about-me-more-2 {
+    order: 1;
+}
+
 .section-about-me-description {
     display: flex;
     flex-direction: column;
