@@ -1,5 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
 
+/* For themeing */
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #2c3e50;
+    --background-color: #f8f9fa;
+    --text-color: #edf0f1;
+    --border-radius: #3498db;
+    --transition-speed: 0.3s;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -7,9 +17,17 @@
     background-color: #24252a;
 }
 
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+
 h1, h2, h3, h4, h5, p {
     font-family: "Montserrat", sans-serif;
-    color: #edf0f1;
+    color: var(--text-color);
 }
 
 li, a, button {
@@ -29,6 +47,19 @@ header {
 
 main {
     margin: 30px 10%;
+}
+
+button {
+    padding: 9px 25px;
+    background-color: rgba(0,136,169,1);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;    
+}
+
+button:hover {
+    background-color: rgba(0,136,169,0.8);
 }
 
 #title {
@@ -112,18 +143,4 @@ main {
 
 .skillset-box ul li {
     margin-top: 10px;
-}
-
-
-button {
-    padding: 9px 25px;
-    background-color: rgba(0,136,169,1);
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: all 0.3s ease 0s;    
-}
-
-button:hover {
-    background-color: rgba(0,136,169,0.8);
 }
