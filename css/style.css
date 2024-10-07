@@ -5,16 +5,19 @@
     --primary-color: #3498db;
     --secondary-color: #2c3e50;
     --background-color: #f8f9fa;
-    --body-background-color: radial-gradient(circle, rgb(22, 22, 40) 0%, rgb(38, 10, 65) 50%, rgb(53, 15, 44) 100%);
     --text-light-color: #edf0f1;
     --text-dark-color: #2c3e50;
-    --border-radius: 12px;
     --shadow-color: rgba(0, 0, 0, 0.1);
+
+    --border-radius: 12px;
+    
     --transition-speed: 0.3s;
     --transition-time: 0.5s;
 }
 
-* {
+*,
+*::after,
+*::before{
     box-sizing: border-box;
     margin: 0;
     border: 0;
@@ -27,8 +30,8 @@ body {
     flex-direction: column;
     align-content: center;
     justify-content: center;
-    background: var(--body-background-color);
-    -webkit-backdrop-filter: blur(50px);
+    background: rgb(40,3,41);
+    background: linear-gradient(180deg, rgb(21, 1, 21) 0%, rgba(50,3,74,1) 51%, rgb(14, 0, 30) 100%);
     backdrop-filter: blur(50px);
 }
 
@@ -74,20 +77,46 @@ button {
     transition: all 0.3s ease 0s;    
 }
 
+button:hover {
+    background-color: rgba(0,136,169,0.8);
+}
+
 .btn-secondary {
     background-color: var(--secondary-color);
     margin-right: 10px;
 }
 
-button:hover {
-    background-color: rgba(0,136,169,0.8);
-}
-
 #title {
+    position: relative;
     font-weight: bold;
-    color: #edf0f1;
+    font-size: 2rem;
     cursor: pointer;
     margin-right: auto;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-color: white;
+    -webkit-text-stroke-width: 1px;
+    text-shadow: 8px 8px #ff1f8f8e, 15px 15px #7509327f;
+}
+
+#title::before {
+    content: "";
+    position: absolute;
+    top: 110%;
+    left: 0;
+    background: rgb(255, 255, 255);
+    width: 110%;
+    height: 5%;
+    box-shadow: 8px 8px #751fff, 15px 15px #7509327f;
+}
+
+#title::after {
+    content: "";
+    position: absolute;
+    top: 10%;
+    left: 115%;
+    background: rgb(255, 255, 255);
+    width: 1%;
+    height: 100%;
 }
 
 .text-dark-color {
@@ -159,6 +188,11 @@ button:hover {
 
 .nav-links li a {
     transition: all 0.3s ease 0s;
+}
+
+.nav-links li a::before {
+    content: "";
+
 }
 
 .nav-links li a:hover {
