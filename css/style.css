@@ -86,39 +86,6 @@ button:hover {
     margin-right: 10px;
 }
 
-#title {
-    position: relative;
-    font-weight: bold;
-    font-size: 2rem;
-    cursor: pointer;
-    margin-right: auto;
-    -webkit-text-fill-color: transparent;
-    -webkit-text-stroke-color: white;
-    -webkit-text-stroke-width: 1px;
-    text-shadow: 8px 8px #ff1f8f8e, 15px 15px #7509327f;
-}
-
-#title::before {
-    content: "";
-    position: absolute;
-    top: 110%;
-    left: 0;
-    background: rgb(255, 255, 255);
-    width: 110%;
-    height: 5%;
-    box-shadow: 8px 8px #751fff, 15px 15px #7509327f;
-}
-
-#title::after {
-    content: "";
-    position: absolute;
-    top: 10%;
-    left: 115%;
-    background: rgb(255, 255, 255);
-    width: 1%;
-    height: 100%;
-}
-
 .text-dark-color {
     color: var(--text-dark-color);
 }
@@ -177,26 +144,87 @@ button:hover {
     padding: 8% 15px;
 }
 
+#title {
+    position: relative;
+    font-weight: bold;
+    font-size: 2rem;
+    cursor: pointer;
+    margin-right: auto;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-color: white;
+    -webkit-text-stroke-width: 1px;
+    text-shadow: 8px 8px #ff1f8f8e, 15px 15px #7509327f;
+}
+
+#title::before {
+    content: "";
+    position: absolute;
+    top: 110%;
+    left: 0;
+    background: rgb(255, 255, 255);
+    width: 110%;
+    height: 5%;
+    box-shadow: 8px 8px #751fff, 15px 15px #7509327f;
+}
+
+#title::after {
+    content: "";
+    position: absolute;
+    top: 10%;
+    left: 115%;
+    background: rgb(255, 255, 255);
+    width: 1%;
+    height: 100%;
+}
+
 .nav-links {
     list-style: none;
 }
 
 .nav-links li {
     display: inline-block;
-    padding: 0px 15px;
+    padding: 2px 25px;
 }
 
 .nav-links li a {
+    position: relative;
     transition: all 0.3s ease 0s;
+    font-size: 1.15rem;
 }
 
 .nav-links li a::before {
-    content: "";
+    position: absolute;
+    content: '';
+    top: -20%;
+    left: 0;
+    background: rgb(255, 255, 255);
+    width: 0;
+    height: 1%;
+    transition: .5s;
+}
 
+.nav-links li a::after {
+    position: absolute;
+    content: '';
+    bottom: -20%;
+    left: 0;
+    background: rgb(255, 255, 255);
+    width: 0;
+    height: 1%;
+    box-shadow: 2px 2px #ff1f8f8e, 5px 5px #7509327f;
+    transition: .5s;
 }
 
 .nav-links li a:hover {
-    color: #0088a9;
+    color: #ff1f8f;
+}
+
+.nav-links li a:hover::before {
+    width: 100%;
+}
+
+.nav-links li a:hover::after {
+    width: 100%;
 }
 
 .section-skillsets-elements {
