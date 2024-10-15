@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap');
+
+:root {
+    --neon-pink: #ff00ff;
+    --neon-blue: #00ffff;
+    --neon-violet: #8a2be2;
+    --dark-bg: #0a0a0a;
+    --light-text: #ffffff;
+    --timeline-height: 4px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--dark-bg);
+    color: var(--light-text);
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+h1, h2 {
+    font-family: 'Orbitron', sans-serif;
+    text-align: center;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    color: var(--neon-blue);
+    text-shadow: 0 0 10px var(--neon-blue);
+}
+
+.section-title {
+    font-size: 2rem;
+    color: var(--neon-pink);
+    text-shadow: 0 0 5px var(--neon-pink);
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+}
+
+.timeline {
+    position: relative;
+    padding: 2rem 0;
+}
+
+.timeline-container {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 2rem;
+}
+
+.timeline-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: var(--timeline-height);
+    background: linear-gradient(to right, var(--neon-blue), var(--neon-violet));
+    box-shadow: 0 0 10px var(--neon-blue);
+}
+
+.timeline-item {
+    flex: 1;
+    margin: 0 1rem;
+    position: relative;
+}
+
+.timeline-content {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--neon-pink);
+    border-radius: 5px;
+    padding: 1.5rem;
+    box-shadow: 0 0 15px rgba(255, 0, 255, 0.3);
+}
+
+.timeline-content::before {
+    content: '';
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 20px;
+    background: var(--neon-violet);
+    border-radius: 50%;
+    box-shadow: 0 0 10px var(--neon-violet);
+}
+
+.date {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1rem;
+    color: var(--neon-blue);
+    margin-bottom: 0.5rem;
+}
+
+.company, .institution {
+    font-size: 1.2rem;
+    color: var(--neon-pink);
+    margin-bottom: 0.3rem;
+}
+
+.position, .degree {
+    font-size: 1rem;
+    color: var(--neon-violet);
+    margin-bottom: 0.5rem;
+}
+
+.contributions, .details {
+    font-size: 0.9rem;
+    color: var(--light-text);
+    padding-left: 1.2rem;
+}
+
+/* Glitch effect for the title */
+.glitch {
+    position: relative;
+}
+
+.glitch::before,
+.glitch::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.glitch::before {
+    left: 2px;
+    text-shadow: -2px 0 var(--neon-pink);
+    clip: rect(24px, 550px, 90px, 0);
+    animation: glitch-anim 2s infinite linear alternate-reverse;
+}
+
+.glitch::after {
+    left: -2px;
+    text-shadow: -2px 0 var(--neon-violet);
+    clip: rect(85px, 550px, 140px, 0);
+    animation: glitch-anim 2s infinite linear alternate-reverse;
+}
+
+@keyframes glitch-anim {
+    0% {
+        clip: rect(17px, 9999px, 94px, 0);
+    }
+    25% {
+        clip: rect(37px, 9999px, 44px, 0);
+    }
+    50% {
+        clip: rect(58px, 9999px, 54px, 0);
+    }
+    75% {
+        clip: rect(80px, 9999px, 66px, 0);
+    }
+    100% {
+        clip: rect(108px, 9999px, 85px, 0);
+    }
+}
+
+/* Responsive design */
+@media screen and (max-width: 1024px) {
+    .timeline-container {
+        flex-direction: column;
+    }
+
+    .timeline-item {
+        margin: 2rem 0;
+    }
+
+    .timeline-content::before {
+        top: -20px;
+        left: 20px;
+        transform: none;
+    }
+
+    .timeline-container::before {
+        left: 20px;
+        right: auto;
+        height: 100%;
+        width: var(--timeline-height);
+        background: linear-gradient(to bottom, var(--neon-blue), var(--neon-violet));
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+}
