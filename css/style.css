@@ -177,6 +177,14 @@ p.line-height-main {
     letter-spacing: 2px;
 }
 
+.medium-title {
+    color: var(--text-light-color);
+    font-size: var(--font-size-28);
+    letter-spacing: 2px;
+    -webkit-text-stroke-color: rgb(226, 90, 231);
+    -webkit-text-stroke-width: 1px;
+}
+
 .main-description-title {
     position: relative;
     color: var(--text-light-color);
@@ -245,11 +253,11 @@ p.line-height-main {
     padding: 5% 15px;
 }
 
-picture{
+picture#main-profile-pic{
     position: relative;
 }
 
-picture::before {
+picture#main-profile-pic::before {
     content: "";
     position: absolute;
     top: -3%;
@@ -260,7 +268,7 @@ picture::before {
     box-shadow: 8px 8px var(--tertiary-color), 15px 15px var(--secondary-color);
 }
 
-picture::after {
+picture#main-profile-pic::after {
     content: "";
     position: absolute;
     top: 60%;
@@ -451,12 +459,25 @@ picture::after {
     margin-top: 10px;
 }
 
-.section-portfolio-elements, 
-.section-achievement-elements {
+.section-portfolio-elements {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 10%;
+}
+
+.section-achievement-elements{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.achievement-content {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    padding: 10px;
 }
 
 .card {
@@ -503,6 +524,7 @@ picture::after {
 }
 
 .card-description-achievement {
+    margin-left: 15px;
     color: var(--text-dark-color);
     font-weight: 500;
     text-align: center;
@@ -649,7 +671,7 @@ footer {
 .horizontal-timeline {
     display: flex;
     overflow-x: auto;
-    padding: 2rem 0;
+    padding: 1rem 0;
     position: relative;
 }
 
@@ -665,7 +687,7 @@ footer {
 }
 
 .horizontal-item {
-    min-width: 200px;
+    min-width: 450px;
     padding: 1rem;
     background-color: white;
     border-radius: 8px;
@@ -673,8 +695,7 @@ footer {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     position: relative;
 }
-
-.horizontal-item h3, 
+ 
 .horizontal-item p {
     color: var(--text-dark-color);
 }
@@ -691,6 +712,11 @@ footer {
     transform: translateX(-50%);
     border-radius: 50%;
     z-index: 0;
+}
+
+.working-exp-bg-content,
+.educational-exp-bg-content {
+    margin-bottom: 30px;
 }
 
 .carousel {
@@ -870,6 +896,33 @@ footer {
 
 .carousel-dot.active {
     background-color: var(--primary-color);
+}
+
+.timeline-experience-item {
+    font-size: var(--font-size-14); 
+    padding: 5px 5px;
+}
+
+.timeline-experience-job-title {
+    font-size: var(--font-size-32);
+    padding: 10px 5px 0px 5px;
+    line-height: 40px;
+}
+
+.timeline-experience-company {
+    color: var(--primary-color);
+    padding: 0px 5px;
+}
+
+.timeline-experience-description {
+    margin: 20px 0px 20px 5px;
+    font-size: var(--font-size-14);
+}
+
+.timeline-experience-item-line {
+    border: 1px solid var(--secondary-color);
+    width: 80%;
+    margin: 5px 5px;
 }
 
 .modal-overlay {
