@@ -612,8 +612,8 @@ picture#main-profile-pic::after {
 }
 
 footer {
-    background-color: #3f3e3e;
-    padding: 40px 20px;
+    background-color: var(--secondary-color);
+    padding: 15px 20px;
 }
 
 .footer-content {
