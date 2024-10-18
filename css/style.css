@@ -80,7 +80,6 @@ body {
     flex-direction: column;
     align-content: center;
     justify-content: center;
-    background: rgb(40,3,41);
     background: linear-gradient(180deg, rgb(21, 1, 21) 0%, rgb(19, 3, 36) 51%, rgba(50,3,74,1) 100%);
     backdrop-filter: blur(50px);
 }
@@ -112,6 +111,57 @@ li, a, button {
     font-size: 16px;
     color: var(--text-light-color);
     text-decoration: none;
+}
+
+.cyberpunk-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, 
+        #1a0033,  /* Darker purple */
+        #410330,  /* Darker pink */
+        #000d1a   /* Darker blue */
+    );
+    background-size: 400% 400%;
+    animation: gradientShift 15s ease infinite;
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.grid-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        linear-gradient(to right, rgba(255,255,255,0.05) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255,255,255,0.05) 1px, transparent 1px);
+    background-size: 50px 50px;
+}
+
+.neon-lines {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        linear-gradient(90deg, transparent 95%, #ff00ff 95%),
+        linear-gradient(0deg, transparent 95%, #00ffff 95%);
+    background-size: 100px 100px;
+    opacity: 0.1;
 }
 
 header {
