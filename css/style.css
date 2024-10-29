@@ -173,6 +173,8 @@ header {
 
 main {
     margin: 30px 10%;
+    width: min(100% - 2rem, 1200px);
+    margin-inline: auto;
 }
 
 section {
@@ -274,6 +276,14 @@ p.line-height-main {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     padding: 3rem 0;
+    gap: 20px;
+}
+
+.section-about-me-description {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 5% 15px;
 }
 
 .section-about-me-skills {
@@ -294,13 +304,6 @@ p.line-height-main {
 
 .section-about-me-more .about-me-more-2 {
     order: 1;
-}
-
-.section-about-me-description {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    padding: 5% 15px;
 }
 
 picture#main-profile-pic{
@@ -330,10 +333,11 @@ picture#main-profile-pic::after {
 }
 
 #main-profile-pic {
-    width: 85%;
+    width: 100%;
+    max-width: 85%;
+    height: auto;
     border-radius: 2% 18%;
     box-shadow: 8px 8px rgba(255, 31, 143, 0.55), 15px 15px rgba(117, 9, 50, 0.5);
-    display: block;
 }
 
 #title {
@@ -1032,7 +1036,32 @@ footer {
     justify-content: flex-end;
 }
 
+@media (max-width: 480px){
+
+}
+
+@media (max-width: 640px){
+
+}
+
 @media (max-width: 768px){
+    .section-about-me {
+        grid-template-columns: 1fr;
+    }
+
+    .section-about-me picture {
+        text-align: center;
+    }
+
+    .section-about-me-description {
+        padding: 5% 5%;
+    }
+
+    #main-profile-pic {
+        max-width: 50%;
+        margin: 0 auto;
+    }
+
     .modal {
         width: 95%;
     }
@@ -1048,4 +1077,16 @@ footer {
     .section-contact-me-button-elements p {
         font-size: 1rem;
     }
+}
+
+@media (max-width: 1024px){
+
+}
+
+@media (max-width: 1280px){
+
+}
+
+@media (max-width: 1536px){
+
 }
