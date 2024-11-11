@@ -72,20 +72,14 @@
             <section class="section-services">
                 <div class="services-title-container">
                     <h1 class="main-description-title main-description-big-span">Mastery of skills I can do for you!</h1>   
-                    <h3 class="services-secondary-title flex-center" style="margin-top: 5px;">I still have more to go</h3>    
+                    <h3 class="main-description-title" style="margin-top: 5px;">I still have more to go</h3>    
                 </div>                          
-                <div class="skills-tabs">
-                    <button>
-                        Main Skills
-                    </button>
-                    <button>
-                        Secondary Skills
-                    </button>
+                <div class="skills-tabs" role="tablist" aria-label="Tab Buttons">
+                    <button id="button-main-skill-tab" role="tab" aria-selected="true" aria-controls="panel-main-skill"  tabindex="0">Main Skills</button>
+                    <button id="button-secondary-skill-tab" role="tab" aria-selected="false" aria-controls="panel-secondary-skill"  tabindex="-1">Secondary Skills</button>
                 </div>
-                <div class="section-skillsets-list">
-
-                    <!-- Main Skills (default tab) -->
-                    <div class="skillsets-row">
+                <div class="section-skillsets-tabs">
+                    <div id="panel-main-skill" class="skillsets-row" role="tabpanel" aria-labelledby="button-main-skill-tab">
                         <div class="card-skill margin-top-50px">
                             <div class="card-body card-body-skill" style="padding: 10px">
                                 <div class="card-container-image" style="margin-top: 20px;">
@@ -151,9 +145,7 @@
                             </div>
                         </div>
                     </div>
-                    
-                     <!-- Others Skills (Should put on a different tab) -->
-                    <div class="skillsets-row">
+                    <div id="panel-secondary-skill" class="skillsets-row" role="tabpanel" aria-labelledby="button-secondary-skill-tab" hidden>
                         <div class="card-skill margin-top-50px">
                             <div class="card-body card-body-skill" style="padding: 10px">
                                 <div class="card-container-image" style="margin-top: 20px;">
@@ -578,6 +570,7 @@
     </div>    
 
     <!-- Scripts -->
+    <script src="./js/components/tabs.js"></script>
     <script src="./js/components/carousel.js"></script>
     <script src="./js/components/modal.js"></script>
 </body>

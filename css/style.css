@@ -468,10 +468,6 @@ picture#main-profile-pic::after {
     gap: 50px;
 }
 
-.skillsets-row:nth-child(2) {
-    display: none;
-}
-
 .skills-tabs {
     display: flex;
     justify-content: space-around;
@@ -489,6 +485,31 @@ picture#main-profile-pic::after {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+[role="tab"][aria-selected="true"] {
+    border-bottom-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+.tab-content {
+    background: var(--background-color);
+    padding: 1rem;
+}
+
+[role="tabpanel"] {
+    opacity: 0;
+    transform: translateY(10px);
+    display: none;
+    transition: all var(--transition-duration) ease;
+}
+
+[role="tabpanel"]:not([hidden]) {
+    opacity: 1;
+    transform: translateY(0);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 50px;
 }
 
 .section-contact-me-button {
