@@ -462,10 +462,33 @@ picture#main-profile-pic::after {
     gap: 50px;
 }
 
-.section-skillsets-list {
+.skillsets-row {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 50px;
+}
+
+.skillsets-row:nth-child(2) {
+    display: none;
+}
+
+.skills-tabs {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.skills-tabs > button {
+    width: 100%;
+    max-width: 30%;
+    margin-top: 50px;
+}
+
+.services-title-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .section-contact-me-button {
@@ -558,7 +581,7 @@ picture#main-profile-pic::after {
     padding: 25px;
 }
 
-.card-second {
+.card-skill {
     background-color: #fff;
     border-radius: var(--border-radius);
     box-shadow: 5px 5px #ff1f8f8e, 8px 8px var(--tertiary-color), 10px 10px #7509327f;
@@ -569,7 +592,7 @@ picture#main-profile-pic::after {
     transition: transform var(--transition-speed), box-shadow var(--transition-speed);
 }
 
-.card:hover, .card-second:hover {
+.card:hover, .card-skill:hover {
     transform: translateY(-5px);
     box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
 }
@@ -1077,10 +1100,6 @@ footer {
 
     .about-me-description-content > *{
         font-size: var(--font-size-14);
-    }
-
-    .about-me-description-content > * > strong {
-        text-decoration: underline;
     }
 
     #main-profile-pic {
