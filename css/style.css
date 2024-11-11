@@ -212,7 +212,7 @@ button:hover {
     margin-top: 50px;
 }
 
-p.line-height-main {
+.about-me-description-content > * {
     line-height: var(--line-height-1);
 }
 
@@ -240,7 +240,7 @@ p.line-height-main {
 .main-description-title {
     position: relative;
     color: var(--text-light-color);
-    font-size: 5rem;
+    font-size: var(--font-size-80);
     letter-spacing: 2px;
     line-height: 70px;
     -webkit-text-fill-color: transparent;
@@ -267,9 +267,10 @@ p.line-height-main {
 
 .main-description-big-span {
     color: var(--text-light-color);
-    font-size: 5rem;
+    font-size: var(--font-size-80);
+    text-align: center;
     letter-spacing: 2px;
-    -webkit-text-fill-color: white;
+    -webkit-text-fill-color: white;   
 }
 
 .section-about-me {
@@ -283,7 +284,14 @@ p.line-height-main {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    padding: 5% 15px;
+    padding: 5% 14px;
+}
+
+.about-me-description-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 5% auto;
 }
 
 .section-about-me-skills {
@@ -1036,6 +1044,7 @@ footer {
     justify-content: flex-end;
 }
 
+/* Media Queries */
 @media (max-width: 480px){
 
 }
@@ -1055,6 +1064,23 @@ footer {
 
     .section-about-me-description {
         padding: 5% 5%;
+    }
+
+    .main-description-title, .main-description-big-span {
+        font-size: var(--font-size-56);
+        text-align: center;
+    }
+
+    .about-me-description-content {
+        text-align: center;
+    }
+
+    .about-me-description-content > *{
+        font-size: var(--font-size-14);
+    }
+
+    .about-me-description-content > * > strong {
+        text-decoration: underline;
     }
 
     #main-profile-pic {
@@ -1080,7 +1106,22 @@ footer {
 }
 
 @media (max-width: 1024px){
+    .section-about-me {
+        grid-template-columns: 1fr;
+    }
 
+    .section-about-me picture {
+        text-align: center;
+    }
+
+    .section-about-me-description {
+        padding: 5% 5%;
+    }
+
+    #main-profile-pic {
+        max-width: 40%;
+        margin: 0 auto;
+    }
 }
 
 @media (max-width: 1280px){
