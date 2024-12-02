@@ -611,6 +611,7 @@ picture#main-profile-pic::after {
     height: 225px;
     max-width: 350px;
     transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+    margin-top: 50px;
 }
 
 .card:hover, .card-skill:hover {
